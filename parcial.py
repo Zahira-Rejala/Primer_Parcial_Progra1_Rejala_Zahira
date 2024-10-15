@@ -124,11 +124,11 @@ def mas_unidades(lista_cantidades: list[list], lista_marca: list[list], lista_mo
 
 
 #Ejercicio 5
-def ganancia(lista_cantidades, lista_precios, lista_ganancias):
-    for i in range(len(lista_cantidades)):
-        for j in range(len(lista_cantidades[0])):
-            ganancia = lista_cantidades[i][j] * lista_precios[i][j]
-            lista_ganancias[i][j] = ganancia
+def ganancia(matriz):
+    for i in range(len(matriz)):
+        for j in range(len(matriz[0])):
+            ganancia = matriz[2][j] * matriz[3][j]
+            matriz[4][j] = ganancia
 
 
 
@@ -295,7 +295,7 @@ def menu(lista_marca, lista_modelo, lista_cantidades, lista_precios, lista_ganan
             case 4:
                 mas_unidades(lista_cantidades, lista_marca, lista_modelo, lista_precios)
             case 5:
-                ganancia(lista_cantidades, lista_precios, lista_ganancias)
+                ganancia(matriz= matriz_concesionaria)
                 mostrar_matriz_texto_tabla(matriz, columnas)
             case 6:
                 garaje_con_seis_o_mas(lista_cantidades)
